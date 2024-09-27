@@ -24,7 +24,7 @@ In short, we can state that the essence of RAG involves adding your own data (vi
 
 The post-processing is done with an LLM.
 
-
+![flow](images/the-simplest-retrieval-augmented-generation-system.webp)
 
 ## References
 
