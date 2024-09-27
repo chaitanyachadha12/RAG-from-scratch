@@ -1,4 +1,5 @@
 # RAG-from-scratch
+## About
 
 ## Introduction
 
@@ -26,6 +27,23 @@ The post-processing is done with an LLM.
 
 ![flow](images/the-simplest-retrieval-augmented-generation-system.webp)
 
+## Large Language Model
+
+we're going to use ollama to get up and running with an open source LLM on our local machine.
+
+Installation instructions are mentioned in references.
+
+## Repository Files
+
+1. poc.py deals only in the retrieval portion of the RAG.
+2. rag_from_scratch.py includes the llm powered solution.
+
+## Environment Setup
+
+1. `python3 -m venv ./rag_env`
+2. `source ./rag_env/bin/activate`
+3. `pip install -r requirements.txt`
+
 ## References
 
 1. [A beginner's guide to building a Retrieval Augmented Generation (RAG) application from scratch](https://learnbybuilding.ai/tutorials/rag-from-scratch)
@@ -33,3 +51,9 @@ The post-processing is done with an LLM.
 2. [Retrieval Augmented Generation: Streamlining the creation of intelligent natural language processing models](https://ai.meta.com/blog/retrieval-augmented-generation-streamlining-the-creation-of-intelligent-natural-language-processing-models/)
 
 3. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
+
+4. [Jaccard Similarity](https://en.wikipedia.org/wiki/Jaccard_index)
+
+5. [ollama installation instructions](https://ollama.com/)
+
+6. [Llama 3.2](https://www.llama.com/)
