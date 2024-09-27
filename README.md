@@ -38,6 +38,12 @@ Installation instructions are mentioned in references.
 1. poc.py deals only in the retrieval portion of the RAG.
 2. rag_from_scratch.py includes the llm powered solution.
 
+### Instructions for  running rag_scratcch.py
+
+an important step is to make sure that ollama's running already on your local machine by running `ollama serve`.
+
+`ollama run llama3.1`
+
 ## Environment Setup
 
 1. `python3 -m venv ./rag_env`
