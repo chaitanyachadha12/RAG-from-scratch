@@ -15,7 +15,7 @@ corpus_of_documents = [
     "Visit an amusement park and ride the roller coasters."
 ]
 
-user_input = "I like to hike"
+user_input = "I am in mood for a picnic"
 relevant_document = ut.return_response(user_input, corpus_of_documents)
 full_response = []
 # https://github.com/jmorganca/ollama/blob/main/docs/api.md
@@ -37,14 +37,17 @@ response = requests.post(url, data=json.dumps(data), headers=headers, stream=Tru
 try:
     count = 0
     for line in response.iter_lines():
-        # filter out keep-alive new lines
-        # count += 1
-        # if count % 5== 0:
-        #     print(decoded_line['response']) # print every fifth token
         if line:
             decoded_line = json.loads(line.decode('utf-8'))
+            # Debugging: Print the structure of decoded_line
+            print(decoded_line)  # This will help you inspect the actual keys returned in the API response.
             
-            full_response.append(decoded_line['response'])
+            # Safely check if 'response' key exists
+            if 'response' in decoded_line:
+                full_response.append(decoded_line['response'])
+            else:
+                print("Key 'response' not found in the API response.")
 finally:
     response.close()
+
 print(''.join(full_response))

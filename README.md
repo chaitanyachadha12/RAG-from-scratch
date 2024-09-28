@@ -29,26 +29,28 @@ The post-processing is done with an LLM.
 
 ## Large Language Model
 
-we're going to use ollama to get up and running with an open source LLM on our local machine.
+we're going to use llama 2 via ollama to get up and running with an open source LLM on our local machine.
 
-Installation instructions are mentioned in references.
+### Installation instructions
+1. `ollama pull llama2`
+2. run the above command after environment setup.
 
 ## Repository Files
 
 1. poc.py deals only in the retrieval portion of the RAG.
 2. rag_from_scratch.py includes the llm powered solution.
 
-### Instructions for  running rag_scratcch.py
+### Instructions for running rag_scratcch.py
 
-an important step is to make sure that ollama's running already on your local machine by running `ollama serve`.
-
-`ollama run llama3.1`
+An important step is to make sure that ollama's running already on your local machine by running `ollama serve`. (This step is necessary only when llama2 is not fetching API calls.)
 
 ## Environment Setup
 
 1. `python3 -m venv ./rag_env`
 2. `source ./rag_env/bin/activate`
 3. `pip install -r requirements.txt`
+
+After setup, run "rag_from_scratch.py". 
 
 ## References
 
