@@ -1,5 +1,7 @@
 # RAG-from-scratch
+
 ## About
+This small project is about understanding the fundamental intuition behind RAG.
 
 ## Introduction
 
